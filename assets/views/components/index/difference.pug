@@ -1,0 +1,33 @@
+-
+  const differenceList = [
+    {
+      img: 1,
+      value: "15K",
+      name: "Happy Customers"
+    },
+    {
+      img: 2,
+      value: "150K",
+      name: "Monthly Visitors"
+    },
+    {
+      img: 3,
+      value: "15",
+      name: "Countries  Worldwide"
+    },
+    {
+      img: 4,
+      value: "100+",
+      name: "Top Partners"
+    },
+  ]
+
+article.difference
+  .difference__cont.cont
+    h2.difference__title.title Make a Difference
+    ul.difference__list
+      each item in differenceList
+        li.difference__item
+          img.difference__img(src=staticImg(`difference/ic_difference-${item.img}.svg`) alt="" loading="lazy")
+          span.difference__value= item.value
+          p.difference__name.text-big= item.name

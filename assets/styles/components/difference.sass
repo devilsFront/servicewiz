@@ -1,0 +1,77 @@
+.difference
+  position: relative
+  border-radius: 387px 0 0 0
+  padding: 88px 0 13px
+  color: $fc_white
+  overflow: hidden
+  @include media(1240)
+    border-radius: 164px 0 0 0
+  @include media(700)
+    padding: 88px 0 154px
+
+.difference__cont
+  &::before
+    content: ""
+    position: absolute
+    z-index: -1
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 100%
+    +bgImg("difference/difference-1.jpg")
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: top center
+    @include media(1240)
+      +bgImg("difference/difference-1_1240.jpg")
+    @include media(950)
+      +bgImg("difference/difference-1_950.jpg")
+    @include media(700)
+      +bgImg("difference/difference-1_700.jpg")
+    @include media(520)
+      +bgImg("difference/difference-1_520.jpg")
+    @include media(450)
+      +bgImg("difference/difference-1_414.jpg")
+    @include media(360)
+      +bgImg("difference/difference-1_360.jpg")
+
+.difference__title
+  margin-bottom: 72px
+  text-align: center
+  color: $fc_white
+  @include media(1240)
+    margin-bottom: 93px
+
+.difference__list
+  width: 510px
+  display: flex
+  flex-wrap: wrap
+  @include media(700)
+    width: 100%
+    display: block
+
+.difference__item
+  margin-bottom: 97px
+  margin-right: 70px
+  width: 185px
+  flex-shrink: 0
+  text-align: center
+  @include media(1240)
+    margin-bottom: 93px
+  @include media(700)
+    margin-right: 0
+    width: 100%
+
+.difference__img
+  width: 85px
+  height: 85px
+  margin: 0 auto 1px
+
+.difference__value
+  font-weight: 500
+  font-size: 58px
+  line-height: 80px
+
+.difference__name
+  font-weight: 700
+  letter-spacing: 0.1px

@@ -1,0 +1,53 @@
+-
+  const expertDataNav = ["Operated Worldwide", "A single source of truth", "Work Faster", "Clients Satisfaction"]
+  const slider1 = [
+    {
+      name: "Groups of 20 students", value: `<span class="expert-data__slider-value-1-black">20</span> (32%)`, color: "blue"
+    },
+    {
+      name: "Groups of 10 students", value: `<span class="expert-data__slider-value-1-black">20</span> (32%)`, color: "yellow"
+    },
+    {
+      name: "Groups of 5 students", value: `<span class="expert-data__slider-value-1-black">15</span> (24%)`, color: "red"
+    },
+    {
+      name: "Individual sessions", value: `<span class="expert-data__slider-value-1-black">7</span> (12%)`, color: "green"
+    }
+  ]
+
+article.expert-data(data-element="expert-data")
+  .expert-data__cont.cont
+    h2.expert-data__title.title Expert Data Analysts
+    p.expert-data__text.text-big Most calendars are designed for teams. Slate is designed for freelancers who want a simple way to plan their schedule.
+    .expert-data__area
+      .expert-data__nav(data-element="expert-data__nav")
+        each item, index in expertDataNav
+          .expert-data__nav-item(class = index === 0 ? "expert-data__nav-item_active": "" data-index=index data-element="expert-data__nav-item")
+            img.expert-data__nav-img(src=staticImg(`expert-data/ic_expert-data-${index+1}.svg`))
+            .expert-data__nav-box
+              h5.expert-data__nav-name.text-big= item
+              p.expert-data__nav-text.text We focus on ergonomics
+      .expert-data__slider(data-element="expert-data__slider")
+        .expert-data__slider-item-1.expert-data__slider-item.expert-data__slider-item_active(data-element="expert-data__slider-item")
+          h6.expert-data__slider-headline-1 Operated Worldwide
+          .expert-data__slider-area-1
+            ul.expert-data__slider-list-1
+              each item in slider1
+                li.expert-data__slider-list-item-1
+                  span.expert-data__slider-name-1(class=`expert-data__slider-name-1_${item.color}`)= item.name
+                  span.expert-data__slider-value-1!= item.value
+            .expert-data__graph-1
+              img.expert-data__graph-1-circle(src=staticImg("expert-data/expert-data__graph-1.svg") alt="" loading="lazy")
+              img.expert-data__graph-1-img(src=staticImg("expert-data/ic_expert-data__graph-1.svg") alt="" loading="lazy")
+        .expert-data__slider-item-2.expert-data__slider-item(data-element="expert-data__slider-item") График
+        .expert-data__slider-item-3.expert-data__slider-item(data-element="expert-data__slider-item")
+          h6.expert-data__slider-headline-3 Work Faster
+          .expert-data__slider-area-3
+            .expert-data__slider-graph-3
+              img.expert-data__slider-graph-3-img(src=staticImg("expert-data/expert-data__graph-3.svg") alt="" loading="lazy")
+              .expert-data__slider-graph-3-span.text-big Order Sales
+            ul.expert-data__slider-list-3
+              li.expert-data__slider-list-item-3.expert-data__slider-list-item-3_green.text-big A: 43%
+              li.expert-data__slider-list-item-3.expert-data__slider-list-item-3_red.text-big B: 25%
+              li.expert-data__slider-list-item-3.expert-data__slider-list-item-3_blue.text-big C: 32%
+        .expert-data__slider-item-4.expert-data__slider-item(data-element="expert-data__slider-item") График

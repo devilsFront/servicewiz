@@ -1,0 +1,35 @@
+$white: #fff
+$black: #000
+$dark: #252B42
+$grey: #737373
+$orange: #E74040
+
+$fc_white: $white
+$fc_black: $black
+$fc_dark: $dark
+$fc_grey: $grey
+$fc_orange: $orange
+
+// 1400, 1278, 1022, 638
+@mixin media($bp-size)
+  @media (max-width: $bp-size + px)
+    @content
+
+@mixin media_min($bp-size)
+  @media (min-width: $bp-size + 0.1 + px)
+    @content
+
+@mixin hover
+  @include media_min(1022)
+    @content
+
+$imgPath: '../img/'
+
+@mixin bgImg($img)
+  background-image: url($imgPath + $img)
+
+@mixin bgIcon($img, $w: 100%, $h: 100%)
+  background-image: url($imgPath + $img)
+  background-size: $w $h
+  background-repeat: no-repeat
+  background-position: center center

@@ -1,0 +1,35 @@
+-
+  const footerList = ["About", "Our Story", "Projects", 'Terms of Use', "Contact Us"]
+  const socialList = ["in", "inst", "tw"]
+
+footer.footer
+  .footer__cont.cont
+    .footer__area
+      .footer__box.footer__box_servicewiz
+        .footer__logo Servicewiz
+        p.footer__copyright.text-big!= `2020 Copyright Figmaland <br> All rights reserved`
+      .footer__box.footer__box_get-in-touch
+        h5.footer__headline.text-big Get in Touch
+        .footer__list
+          .footer__item
+            span.footer__span.text-big 4517 Washington Ave. Manchester, Kentucky 39495
+          .footer__item
+            a.footer__link.text-big(href="tel:(239)5550108") (239) 555-0108
+          .footer__item
+            a.footer__link.text-big(href="mailto:alma.lawson@example.com") alma.lawson@example.com
+      .footer__box.footer__box_learn-more
+        h5.footer__headline.text-big Learn More
+        .footer__list
+          each item in footerList
+            .footer__item
+              a.footer__link.text-big(href="#")= item
+      .footer__box.footer__box_our-newsletter
+        h5.footer__headline.text-big Our Newsletter
+        p.footer__subscribe.text-big!= `Subscribe to our newsletter <br> to get our news & deals`
+        form.footer__form
+          input.footer__input.text(type="email" placeholder="Email Address" required)
+          button.footer__submit.text Join
+        ul.footer__social-list
+          each item in socialList
+            li.footer__social-item
+              a.footer__social-link(href="#" class=`footer__social-link_${item}`)

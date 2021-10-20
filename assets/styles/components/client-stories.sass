@@ -1,0 +1,159 @@
+.client-stories
+  margin-top: 75px
+  margin-bottom: 147px
+  @include media(1240)
+    margin-top: 113px
+    margin-bottom: 80px
+
+.client-stories__cont
+
+.client-stories__span
+  display: block
+  margin-bottom: 10px
+  font-weight: 500
+  color: $fc_orange
+  text-align: center
+  text-transform: uppercase
+  @include media(1240)
+    margin-bottom: 30px
+
+.client-stories__title
+  max-width: 375px
+  margin: 0 auto 81px
+  text-align: center
+  @include media(1240)
+    margin: 0 auto 101px
+
+.client-stories__area
+  display: flex
+  @include media(1240)
+    display: block
+
+.client-stories__gallery
+  position: relative
+  flex-shrink: 0
+  margin-right: 66px
+  width: 567px
+  @include media(1240)
+    margin: 0 auto 68px
+  @include media(700)
+    width: 100%
+
+.client-stories__picture-big
+  width: 510px
+  box-shadow: 0 13px 19px rgba(0, 0, 0, 0.07)
+  @include media(700)
+    width: 434px
+  @include media(520)
+    position: relative
+    width: calc(100% - 35px)
+    padding-bottom: 100.465%
+
+.client-stories__image-big
+  height: 424px
+  @include media(700)
+    height: 361px
+  @include media(520)
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+
+.client-stories__picture-small
+  position: absolute
+  z-index: 1
+  top: 0
+  right: 0
+  width: 362px
+  box-shadow: 0 13px 19px rgba(0, 0, 0, 0.07)
+  @include media(1240)
+    top: -33px
+  @include media(520)
+    width: calc(100% - 61px)
+    padding-bottom: 54.275%
+
+.client-stories__image-small
+  height: 230px
+  @include media(520)
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+
+.client-stories__slider
+  width: 346px
+  flex-shrink: 0
+  @include media(1240)
+    width: 100%
+
+.client-stories__item
+  height: 0
+  overflow: hidden
+  opacity: 0
+  transition-duration: .2s
+  transition-property: opacity
+
+.client-stories__item_active
+  margin-top: 53px
+  height: 332px
+  overflow: auto
+  margin-bottom: 10px
+  opacity: 1
+  @include media(1240)
+    height: 200px
+  @include media(950)
+    height: 300px
+  @include media(520)
+    height: 380px
+
+.client-stories__headline
+  color: $fc_dark
+  margin-bottom: 23px
+  letter-spacing: 0.1px
+
+.client-stories__text
+  margin-bottom: 29px
+  font-weight: 500
+
+.client-stories__author
+  display: block
+  text-align: right
+  font-weight: 600
+  @include media(1240)
+    text-align: left
+
+.client-stories__nav
+  display: flex
+  justify-content: space-between
+  width: 180px
+  margin-left: auto
+  @include media(1240)
+    margin: 0 auto
+
+.client-stories__btn
+  width: 32px
+  height: 43px
+  +bgIcon("ic_slider_arrow_grey.svg", 32px, 43px)
+
+.client-stories__btn_prev
+  transform: rotate(180deg)
+
+.client-stories__btn_prev-active
+  +bgIcon("ic_slider_arrow_black.svg", 32px, 43px)
+  cursor: pointer
+
+.client-stories__btn_next
+
+.client-stories__btn_next-active
+  +bgIcon("ic_slider_arrow_black.svg", 32px, 43px)
+  cursor: pointer
+
+.client-stories__nav-text
+  font-weight: 500
+  font-size: 24px
+  line-height: 40px
+
+.client-stories__nav-note
+
+.client-stories__current
+  margin-right: 9px

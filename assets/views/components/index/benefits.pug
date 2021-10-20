@@ -1,0 +1,36 @@
+-
+  const benefitsList = [
+    {
+      headline: "24/7 Support",
+      text: "Slate helps you see how many more days you need to work to reach"
+    },
+    {
+      headline: "Secure System",
+      text: "Slate helps you see how many more days you need to work to reach"
+    },
+    {
+      headline: "Innovative Solutions",
+      text: "Innovative Solutions"
+    },
+    {
+      headline: "Marketing",
+      text: "Slate helps you see how many more days you need to work to reach"
+    },
+    {
+      headline: "Reasearch",
+      text: "Slate helps you see how many more days you need to work to reach"
+    },
+    {
+      headline: "Creative Integration",
+      text: "Slate helps you see how many more days you need to work to reach"
+    },
+  ]
+
+article.benefits
+  .benefits__cont.cont
+    ul.benefits__list
+      each item in benefitsList
+        li.benefits__item
+          img.benefits__img(src=staticImg("ic_benefits.svg"))
+          h5.benefits__headline.fc_dark.text-big= item.headline
+          p.benefits__text.text= item.text

@@ -1,0 +1,65 @@
+.header
+  position: relative
+  z-index: 10
+  height: 104px
+  background-color: transparent
+
+.header__cont
+  display: flex
+  align-items: center
+  height: 100%
+
+.header__logo
+  margin-right: 188px
+  font-weight: 400
+  color: $fc_white
+  @include media(1240)
+    margin-right: 0
+
+.header__logo-span
+  font-weight: 700
+
+.header__list
+  display: flex
+  margin: 0 -8px
+  @include media(1240)
+    display: none
+
+.header__item
+  margin: 0 8px
+
+.header__link
+  padding: 10px
+  font-weight: 600
+  color: #BDBDBD
+  transition-property: color
+  transition-duration: .2s
+
+a.header__link
+  text-decoration: none
+  &:hover
+    @include hover
+      color: $fc_white
+
+.header__link_active
+  color: $fc_white
+
+.header__link
+
+.header__search
+  cursor: pointer
+  margin-left: auto
+  margin-right: 10px
+  width: 40px
+  height: 40px
+  +bgIcon("ic_search_white.svg", 20px, 20px)
+
+.header__burger
+  display: none
+  @include media(1240)
+    display: block
+    margin-left: 12px
+    width: 40px
+    height: 40px
+    margin-right: -10px
+    +bgIcon("ic_burger_white.svg", 28px, 16px)

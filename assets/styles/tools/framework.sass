@@ -1,0 +1,50 @@
+.wrapper
+  position: relative
+  flex-grow: 1
+  display: flex
+  flex-direction: column
+
+.cont
+  margin: 0 auto
+  max-width: 1050px + 32px
+  padding-right: 16px
+  padding-left: 16px
+  @include media(1240)
+    max-width: 852px + 32px
+  @include media(950)
+    max-width: 648px + 32px
+  @include media(700)
+    max-width: 468px + 32px
+  @include media(520)
+    padding-right: 34px
+    padding-left: 34px
+    max-width: 392px + 68px
+
+.caption
+  font-weight: 500
+  font-size: 58px
+  line-height: 80px
+  @include media(1240)
+    font-size: 40px
+    line-height: 57px
+
+.title
+  color: $fc_dark
+  font-size: 40px
+  line-height: 57px
+
+.headline
+  font-size: 24px
+  line-height: 32px
+  letter-spacing: 0.1px
+
+.text-big
+  font-size: 16px
+  line-height: 26px
+
+.text
+  font-size: 14px
+  line-height: 24px
+
+.fc_dark
+  color: $fc_dark

@@ -1,0 +1,52 @@
+-
+  const clientStoriesSlider = [
+    {
+      headline: "A rethink of how we work",
+      text: "Slate helps you see how many more days you need to work to reach your financial goal for the month and year.When you add work to your Slate calendar we automatically calculate useful insights about the financial health of your business.",
+      author: "Jim - Product Designer"
+    },
+    {
+      headline: "Lorem ipsum dolor sit amet",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem dolor sed viverra ipsum nunc aliquet bibendum enim facilisis.",
+      author: "consectetur adipiscing "
+    },
+    {
+      headline: "Dictum fusce ut placerat",
+      text: "Dictumst quisque sagittis purus sit amet volutpat consequat mauris nunc. Diam vulputate ut pharetra sit amet aliquam id. Nisi vitae suscipit tellus mauris a diam maecenas.",
+      author: "orci nulla"
+    },
+    {
+      headline: "Sed ullamcorper morbi",
+      text: "Proin sed libero enim sed faucibus turpis in. Aliquet nibh praesent tristique magna sit amet purus gravida. Nibh nisl condimentum id venenatis a condimentum vitae.",
+      author: "tincidunt ornare"
+    },
+  ]
+
+article.client-stories(data-element="client-stories")
+  .client-stories__cont.cont
+    span.client-stories__span.text-big CLIENT STORIES
+    h2.client-stories__title.title Designing Better Expericences
+    .client-stories__area
+      .client-stories__gallery
+        picture.client-stories__picture-big
+          source(srcset=staticImg("client-stories/client-stories-1_311.webp") + " 1x, " + staticImg("client-stories/client-stories-1_622.webp") + " 2x" type="image/webp" media="(max-width: 520px)")
+          source(srcset=staticImg("client-stories/client-stories-1_434.webp") type="image/webp" media="(max-width: 700px)")
+          source(srcset=staticImg("client-stories/client-stories-1.webp") type="image/webp")
+          source(srcset=staticImg("client-stories/client-stories-1_311.jpg") + " 1x, " + staticImg("client-stories/client-stories-1_622.jpg") + " 2x" media="(max-width: 520px)")
+          source(srcset=staticImg("client-stories/client-stories-1_434.jpg") media="(max-width: 700px)")
+          img.client-stories__image-big(src=staticImg("client-stories/client-stories-1.jpg") alt="" loading="lazy")
+        picture.client-stories__picture-small
+          source(srcset=staticImg("client-stories/client-stories-2_285.webp") + " 1x, " + staticImg("client-stories/client-stories-2_570.webp") + " 2x" media="(max-width: 520px)")
+          source(srcset=staticImg("client-stories/client-stories-2.webp") type="image/webp")
+          source(srcset=staticImg("client-stories/client-stories-2_285.jpg") + " 1x, " + staticImg("client-stories/client-stories-2_570.jpg") + " 2x" media="(max-width: 520px)")
+          img.client-stories__image-small(src=staticImg("client-stories/client-stories-2.jpg") alt="" loading="lazy")
+      .client-stories__slider(data-element="client-stories__slider")
+        each item, index in clientStoriesSlider
+          .client-stories__item(class = index === 0 ? "client-stories__item_active": "" data-element="client-stories__item")
+            h3.client-stories__headline.headline= item.headline
+            p.client-stories__text.text-big= item.text
+            span.client-stories__author.text= item.author
+        .client-stories__nav
+          .client-stories__btn.client-stories__btn_prev(data-element="client-stories__btn_prev")
+          .client-stories__nav-text!= `<span class="client-stories__current" data-element="client-stories__current">1</span>` + `<span class="client-stories__nav-note">/ 4</span>`
+          .client-stories__btn.client-stories__btn_next.client-stories__btn_next-active(data-element="client-stories__btn_next")

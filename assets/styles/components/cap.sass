@@ -1,0 +1,59 @@
+.cap
+  position: relative
+  margin-top: -104px
+  padding-top: 104px
+  height: 682px
+  color: $fc_white
+  background: rgba(23, 23, 23, 0.5)
+
+.cap__cont
+  &::before
+    content: ""
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: -1
+    +bgImg("cap/cap-1_1920.jpg")
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: top right
+    @include media(1240)
+      +bgImg("cap/cap-1_1240.jpg")
+    @include media(950)
+      +bgImg("cap/cap-1_950.jpg")
+    @include media(700)
+      +bgImg("cap/cap-1_700.jpg")
+    @include media(520)
+      +bgImg("cap/cap-1_520.jpg")
+    @include media(450)
+      +bgImg("cap/cap-1_414.jpg")
+    @include media(360)
+      +bgImg("cap/cap-1_360.jpg")
+
+.cap__area
+  margin: 76px auto 0
+  max-width: 410px
+  text-align: center
+  @include media(1240)
+    margin: 66px auto 0
+
+.cap__note
+  display: block
+  margin-bottom: 13px
+  font-weight: 700
+  letter-spacing: 0.1px
+  text-transform: uppercase
+  @include media(1240)
+    margin-bottom: 16px
+
+.cap__caption
+  margin-bottom: 15px
+  @include media(1240)
+    margin-bottom: 29px
+
+.cap__text
+  font-weight: 500
+  @include media(1240)
+    line-height: 40px

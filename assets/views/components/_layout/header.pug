@@ -1,0 +1,19 @@
+header.header
+  .header__cont.cont
+    if VIEW === "index"
+      span.header__logo.headline
+        | Service
+        span.header__logo-span wiz
+    else
+      a.header__logo.headline(href="#")
+        | Service
+        span.header__logo-span wiz
+    ul.header__list
+      each item, index in ["Home", "Service", "Pricing", "About", "Contact"]
+        li.header__item
+          if index === 0
+            span.header__link.header__link_active.text= item
+          else
+            a.header__link.text(href="#")= item
+    .header__search
+    .header__burger
